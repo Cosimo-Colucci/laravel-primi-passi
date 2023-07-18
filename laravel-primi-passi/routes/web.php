@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $data = [
+        'title' => 'Laraver-primi - passi',
+        'benvenuto' => 'Hello Word',
+        'espressione' => 'LOL',
+    ];
+
+    // var_dump ($data);
+    return view('home', $data);
 });
 
